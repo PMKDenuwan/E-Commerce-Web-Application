@@ -1,9 +1,6 @@
 package com.PMKDenuwan.order_service_api.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,4 +31,10 @@ public class OrderDetail {
 
     @Column(name="Discount",nullable = false, precision = 10, scale = 2)
     private double discount;
+
+
+    @ManyToOne
+    @JoinColumn(name =  "customer_order_id")
+    private CustomerOrder customerOrder;
+
 }
