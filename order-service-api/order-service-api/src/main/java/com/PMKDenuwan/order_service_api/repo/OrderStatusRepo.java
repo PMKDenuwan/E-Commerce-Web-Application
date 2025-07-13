@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface OrderStatusRepo extends JpaRepository<OrderStatus, String> {
 
-    
+
 
 
 }
