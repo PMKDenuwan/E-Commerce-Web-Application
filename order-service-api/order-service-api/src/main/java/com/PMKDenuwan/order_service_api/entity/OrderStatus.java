@@ -22,7 +22,7 @@ public class OrderStatus {
     @Column(name="status_id",nullable = false, unique = true, length = 80)
     private String statusId;
 
-    @Column(name="status",nullable = false)
+    @Column(name="status",nullable = false, unique = true, length = 80)
     private String status;
 
     @OneToMany(mappedBy = "orderStatus")
